@@ -1,0 +1,6 @@
+---
+- name: ping
+  hosts: homelab
+  tasks:
+    - name: ping-task
+      ping: 
