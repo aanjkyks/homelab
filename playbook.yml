@@ -1,6 +1,11 @@
 ---
-- name: ping
+- name: update packages
+  become: yes
   hosts: homelab
+  vars_files:
+    - secret
   tasks:
-    - name: ping-task
-      ping: 
+    - name: update-task
+      apt: 
+        update_cache: yes
+        upgrade: yes
